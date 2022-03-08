@@ -11,6 +11,8 @@ app.add_url_rule
 # app.add_url_rule
 
 
+
+
 @app.route("/api/healthcheck", methods = ["POST", "GET"])
 def healthcheck():
     return response.success(None)
@@ -33,4 +35,5 @@ def motion():
 
 
 if __name__ == "__main__":
+    initgrio()
     app.run()
